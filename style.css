@@ -1,0 +1,370 @@
+body{
+    margin: 0px;
+    width: 100%;
+}
+section nav ul li{
+	list-style-type: none;
+	float: left;
+	text-decoration:none;
+	padding-right: 20px;
+	text-transform: capitalize;
+
+}
+section nav ul{
+	float: right;
+
+}
+section nav{
+	width: 100%;
+	height: 70px;
+	padding-bottom: 10px;
+	background-color:#112d4e;
+	position: fixed;
+
+}
+section nav a{
+	text-decoration: none;
+	color:whitesmoke;
+}
+.content{
+	padding-top: 50px;
+	display: table;
+	height: 100vh;
+	background-color:#dbe2ef;
+	width: 100%;
+}
+.content .inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.content .inner h1{
+	font-size: 50px;
+}
+.inner-list li{
+    list-style-type: none;
+    float: left;
+    padding-right: 10px;
+}
+.inner-list li:last-child{
+	list-style-type: none;
+	float:none;
+}
+.inner-list li:not(:first-child)::before{   /*(meaning if it is not a first child them add before to all li elements)*/
+	content: '|';
+	 padding-left: 5px;
+}
+.inner-list li:first-child{
+	content: none;
+}
+.table h1{
+	font-size: 50px;
+}
+.table table{
+	width: 100%;
+	text-align: center;
+	height: 100vh;
+
+}
+.table{
+	overflow: scroll;
+	padding: 50px;
+	background-color:whitesmoke;
+}
+table, th,td{
+    border:1px solid black;
+}
+
+tr:hover{           /*or even   and hover is used for->when we put the arrow mark there*/
+	background-color: #f9f7f7;
+}
+.borderwidth{
+	border-width: 7px; /* instead of px ->(or thin ,medium,thick)*/
+	border-style: ridge;
+	border-color: magenta;
+	height: 100vh;
+	font-size: 30px;
+	background-color: #dbe2ef;
+}
+.borderwidth h1{
+	padding-left:100px;
+}
+.floatright{
+	height: 100vh;
+	display: table;
+	float: right;
+	font-size: 20px;
+}
+
+.floatleft{
+	height: 100vh;
+	display: table;
+	font-size: 20px;
+}
+.floatleft .inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.height{
+	height: 100vh;
+	text-align: center;
+	padding: 50px;
+	font-size: 30px;
+	background-image: url('https://www.richardblott.com/images/home-banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+  color: whitesmoke;
+}
+.maxheight{
+	max-height: 120px;
+	overflow: scroll;
+	padding: 30px;
+}
+.minheight{
+	min-height: 150px;
+	background-color: #dbe2ef;
+	padding: 30px;
+}
+.text{
+	text-align: justify;  /*end is same as right i.e end=right, start=left */  /* another option is justify*/
+	letter-spacing: 5px;
+	
+	word-break: break-all;  /*or keep all or loose */
+	text-decoration: unset;
+	height: 100vh;
+	padding: 30px; 
+	
+}
+.text h1{
+  text-shadow: 5px 5px 5px #49e18d;
+}
+.fonts{
+	 height: 100vh;
+	 text-align: center;
+	 font-size: 30px;
+	 padding-top: 50px;
+	 color:whitesmoke;
+	 background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-space-universe-banner-background-universetechnology-backgroundgradient-backgroundgradual-image_54068.jpg');
+	 background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.fonts h1{
+	text-align: left;
+}
+.fonts h3{
+   font-family: 'Roboto', sans-serif;
+   font-size: 40px;
+   font-weight: 300;
+   font-style: italic;
+   line-height: 10px;
+}
+.button{
+	height: 100vh;
+	font-size: 30px;
+	padding-top:50px;
+	background-color: #dbe2ef;
+}
+.button button{
+	  background-color:#cef9e2;
+	  border-radius: 50px;
+	  border-color:transparent;
+	  font-size: 30px;
+}
+.button button a{
+	color:black;
+	text-decoration: none;
+}
+.gradient{
+	height: 100vh;
+	text-align: center;
+	background-image: linear-gradient(blue,purple,violet,pink);
+	font-size: 30px;
+	padding-top: 50px;
+}
+.transition{
+	background: none;
+	transition: background 3s;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+.transition h1{
+	font-size: 30px;
+}
+.transition p{
+	font-size: 30px;
+	text-align: center;
+}
+.transition:hover{
+     background: yellow;
+}
+.animate{
+	width:100%;
+	height: 100vh;
+	padding-top: 50px;
+	animation: animate 10s infinite  /* name  time  how-many-times */
+}
+.animate h1{
+	font-size: 30px;
+}
+.animate p{
+	font-size: 30px;
+	text-align: center;
+}
+@keyframes animate{
+	0%{
+		background-color: #112d4e;
+	}
+	25%{
+		background-color: #3f72af;
+	}
+	50%{
+		background-color: #dbe2ef;
+	}
+	100%{
+		background-color:#f9f7f7;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+	section .content{
+		width: 100%;
+		float: left;
+	}
+	section .iframes{
+		width: 100%;
+		float: left;
+	}
+	.content{
+		width: 100%;
+		padding: 300px;
+	}
+	.table{
+		width: 100%;
+		padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 300px;
+	}
+	.borderwidth{
+		width: 100%;
+		padding: 300px;
+	}
+	.floatright{
+		float: right;
+	}
+	.height{
+		width: 100%;
+		padding: 300px;
+	}
+	.maxheight{
+		width: 100%;
+		padding: 300px;
+		font-size: 30px;
+	}
+	.minheight{
+		width: 100%;
+		padding: 300px;
+		font-size: 30px;
+	}
+	.text{
+		width: 100%;
+		padding: 300px;
+		font-size: 18px;
+	}
+	.fonts{
+		width: 100%;
+		padding: 300px;
+	}
+	.button{
+		width: 100%;
+		padding: 300px;
+	}
+	.gradient{
+		width: 100%;
+		padding: 300px;
+	}
+	.transition{
+		width: 100%;
+		padding: 300px;
+	}
+	.animate{
+		width: 100%;
+		padding: 300px;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 1023px){
+	section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+	.button .md{
+	padding: 11px 25px;
+	font-size: 18px;
+	
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+	section .content{
+		width: 40%;
+		float: left;
+	}
+	section .iframes{
+		width: 60%;
+		float: left;
+	}
+	
+}
+@media (min-width: 1440px) and (max-width: 2559px){
+	section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+	
+}
+@media (min-width: 2560px){
+    section .content{
+		width: 50%;
+		float: left;
+	}
+	section .iframes{
+		width: 50%;
+		float: left;
+	}
+	
+}
+@media (min-width: 1441px) and (max-width: 2560px){
+	.button .xl{
+	padding: 15px 45px;
+	font-size: 32px;
+}
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+	.button .lg{
+	padding: 13px 35px;
+	font-size: 24px;
+}
+}
+@media(min-width: 768px) and (max-width: 1023px){
+	.button .md{
+	padding: 11px 25px;
+	font-size: 18px;
+}
+}
+@media(min-width: 425px) and (max-width: 767px){
+	.button .sm{
+	padding: 9px 15px;
+	font-size: 16px;
+}
+}
+@media (min-width: 320px) and (max-width: 424px){
+	.button .xs{
+	padding: 7px 5px;
+	font-size: 12px;
+}
